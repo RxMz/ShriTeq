@@ -20,7 +20,7 @@ public class Servce extends Service {
     @Override
     public void onCreate(){
         super.onCreate();
-        Parse.initialize(this, "RQesfwNGhDkJJFlvjDlf066E462JSuUo3cLeifHR", "pyQkjMalbN3eEENzwKy6Uqn92PhZ1Fgumf2J77Y2");
+        Parse.initialize(this, "Application ID", "Client ID");
         ParseInstallation.getCurrentInstallation().saveInBackground();
     }
 }
