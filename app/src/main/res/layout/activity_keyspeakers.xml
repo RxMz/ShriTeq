@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/back"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:textColor="#d50000"
+                android:layout_gravity="center"
+                android:text="Shreyans Jain"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shreyans"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shreyans Jain is a 21 year old graduate from Christ University who co-founded Under 25 Club while pursuing his degree in management. Under 25 Club is a three year old organisation that aims to create a platform for entrepreneurs, innovators, creators and doers under the age of 25. He also curates and hosts the annual event called Under 25 Summit, which is the offline convergence of these young changemakers"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#ff5252"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:layout_gravity="center"
+                android:textColor="#d50000"
+                android:text="Gaurav Agarwal"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gaurav"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J Startup entrepreneur at a GSF-backed project lying at the cross-section of ad tech and gaming • Management consulting experience with Bain and Company, with key engagement in a global effort focused on building enduring partnerships with 100 developing market leaders of the future • Indian School of Business dropout (admitted in the first batch of Young Leaders, Class of 2015)"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="#ff5252"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

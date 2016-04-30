@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.todaysfuture.shriteq">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/shriteq"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.CALL_PHONE" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/shriteq">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="Organizing committee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:label="Register Your school"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login1"
+            android:label="Participants Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home"
+            android:label="Organizing Committe"
+            android:screenOrientation="portrait" />
+        <activity android:name=".home1"
+            android:screenOrientation="portrait"
+            android:label="Welcome"/>
+        <activity
+            android:name=".events"
+            android:label="Events"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sponsors"
+            android:label="@string/title_activity_sponsors"
+            android:screenOrientation="portrait"
+            android:theme="@style/shriteq" />
+        <activity android:name=".contactTeacher"
+            android:label="Contact a Teacher" android:screenOrientation="portrait"/>
+        <activity android:name=".attend"
+            android:screenOrientation="portrait" />
+        <activity android:name=".keyspeakers"
+            android:label="Keynote Speakers"/>
+        <activity android:name=".AboutUs"
+            android:label="About Us"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ContactUs"
+            android:label="Contact Us"
+            android:screenOrientation="portrait"/>
+<activity android:name=".LiveScore"
+    android:screenOrientation="portrait"
+    android:label="Live Scores"/>
+        <activity android:name=".announcements"
+            android:label="Announcements"
+            android:screenOrientation="portrait"/>
+<activity android:name=".tasksassigned"
+    android:screenOrientation="portrait"
+    android:label="Tasks"/>
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.todaysfuture.shriteq" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="RQesfwNGhDkJJFlvjDlf066E462JSuUo3cLeifHR" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="pyQkjMalbN3eEENzwKy6Uqn92PhZ1Fgumf2J77Y2" />
+        <service android:name=".Servce"/>
+    </application>
+    <meta-data android:name="com.parse.push.notification_icon"/>
+</manifest>

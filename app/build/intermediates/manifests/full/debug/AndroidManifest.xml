@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.todaysfuture.shriteq"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <meta-data android:name="com.parse.push.notification_icon" />
+    <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+    <permission
+        android:name="com.todaysfuture.shriteq.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.todaysfuture.shriteq.permission.C2D_MESSAGE" /> <!-- INTERNET and c2dm RECEIVE are basic requirements for push messages through Google's GCM. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--
+ Required so the device vibrates on receiving a push notification.
+         Vibration settings of the device still apply.
+    -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- NOTE: See release version for tags with placeholders -->
+    <!-- START: ShortcutBadger -->
+    <!-- for Samsung -->
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" /> <!-- for apex -->
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/shriteq"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.CALL_PHONE" />
+
+        <activity
+            android:name="com.todaysfuture.shriteq.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/shriteq" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.todaysfuture.shriteq.Login"
+            android:label="Organizing committee"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.Register"
+            android:label="Register Your school"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.Login1"
+            android:label="Participants Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.home"
+            android:label="Organizing Committe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.home1"
+            android:label="Welcome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.events"
+            android:label="Events"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.Sponsors"
+            android:label="@string/title_activity_sponsors"
+            android:screenOrientation="portrait"
+            android:theme="@style/shriteq" />
+        <activity
+            android:name="com.todaysfuture.shriteq.contactTeacher"
+            android:label="Contact a Teacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.attend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.keyspeakers"
+            android:label="Keynote Speakers" />
+        <activity
+            android:name="com.todaysfuture.shriteq.AboutUs"
+            android:label="About Us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.ContactUs"
+            android:label="Contact Us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.LiveScore"
+            android:label="Live Scores"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.announcements"
+            android:label="Announcements"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.todaysfuture.shriteq.tasksassigned"
+            android:label="Tasks"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.todaysfuture.shriteq" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="RQesfwNGhDkJJFlvjDlf066E462JSuUo3cLeifHR" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="pyQkjMalbN3eEENzwKy6Uqn92PhZ1Fgumf2J77Y2" />
+
+        <service android:name="com.todaysfuture.shriteq.Servce" />
+
+        <meta-data
+            android:name="onesignal_app_id"
+            android:value="950194e6-0ea5-4d81-9728-06e1797f9b46" />
+        <meta-data
+            android:name="onesignal_google_project_number"
+            android:value="str:178757581745" />
+
+        <receiver
+            android:name="com.onesignal.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.todaysfuture.shriteq" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
+
+        <service android:name="com.onesignal.GcmIntentService" />
+        <service
+            android:name="com.onesignal.SyncService"
+            android:stopWithTask="false" />
+
+        <activity
+            android:name="com.onesignal.PermissionsActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.google.android.gms.measurement.AppMeasurementContentProvider"
+            android:authorities="com.todaysfuture.shriteq.google_measurement_service"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

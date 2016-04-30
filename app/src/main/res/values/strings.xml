@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ShriTeq</string>
+    <string name="title_activity_home">home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sponsors">Sponsors</string>
+    <string-array name="actions">
+        <item>Ms.Rashmita Panigrahi - Head of Organizing Committee</item>
+        <item>Send Text</item>
+        <item>Call</item>
+    </string-array>
+    <string-array name="actions1">
+        <item>Ms.Shalini Chaturvedi</item>
+        <item>Send Text</item>
+        <item>Call</item>
+    </string-array>
+    <string-array name="actions2">
+        <item>Ms. Kanika Alhuwalia</item>
+        <item>Send Text</item>
+        <item>Call</item>
+    </string-array>
+</resources>

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/rishabh/Desktop/ShriTeq/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/home/rishabh/Desktop/ShriTeq/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/home/rishabh/Desktop/ShriTeq/app/build/intermediates/res/merged/debug/menu/activity_home_drawer.xml",
+        "source": "/home/rishabh/Desktop/ShriTeq/app/src/main/res/menu/activity_home_drawer.xml"
+    },
+    {
+        "merged": "/home/rishabh/Desktop/ShriTeq/app/build/intermediates/res/merged/debug/menu/home.xml",
+        "source": "/home/rishabh/Desktop/ShriTeq/app/src/main/res/menu/home.xml"
+    },
+    {
+        "merged": "/home/rishabh/Desktop/ShriTeq/app/build/intermediates/res/merged/debug/menu/menu_home1.xml",
+        "source": "/home/rishabh/Desktop/ShriTeq/app/src/main/res/menu/menu_home1.xml"
+    },
+    {
+        "merged": "/home/rishabh/Desktop/ShriTeq/app/build/intermediates/res/merged/debug/menu/menu_sponsors.xml",
+        "source": "/home/rishabh/Desktop/ShriTeq/app/src/main/res/menu/menu_sponsors.xml"
+    }
+]

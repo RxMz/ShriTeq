@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible" >
+
+
+
+                    <TextView
+                        android:id="@+id/txtTimerDay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="25dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ff5252" />
+
+                    <TextView
+                        android:id="@+id/txt_TimerDay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Days"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ff5252" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtTimerHour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="25dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ff5252" />
+
+                    <TextView
+                        android:id="@+id/txt_TimerHour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Hours"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ff5252" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtTimerMinute"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="25dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ff5252" />
+
+                    <TextView
+                        android:id="@+id/txt_TimerMinute"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Minutes"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ff5252" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtTimerSecond"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="25dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ff5252" />
+
+                    <TextView
+                        android:id="@+id/txt_TimerSecond"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Seconds"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#ff5252" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="30dp"
+                android:textColor="#ff5252"
+                android:text="LEFT!"/>
+
+
+
+
+
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logonew"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="2015 has been a remarkable year in the realm of technology, from Google changing its iconic logo to Elon Musk suggesting the use of a Nuclear weapon to warm up Mars, we have seen a lot this year. 2015 has also been the year of Entrepreneurship, with a 115% rise in the number of unicorn companies over the past year. Two key virtues that drive startups are the knowledge of technology and product innovation. This year at ShriTeq we aim to test them both. We have a massive quiz hosted by Rajiv Makhni and an product development event judged by revolutionary entrepreneurs from around the country."
+                android:textColor="#64ffda"/>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+    <ListView
+        android:id="@+id/drawer_list"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/listviewcolor"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+</android.support.v4.widget.DrawerLayout>
